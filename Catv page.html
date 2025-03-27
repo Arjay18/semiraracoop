@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+       <meta name="format-detection" content="telephone=no">
+      <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    
+      <link rel="icon" type="image/x-icon" href="images/logo/semco logo 1.jpg">
+      <link rel="shortcut icon" type="image/x-icon" href="images/logo/semco logo 1.jpg">
+        <title>Semirara Multi-Purpose Cooperative</title>
+        <meta name="description" content=The Semirara Multi-Purpose Cooperative (SMPC) is a community-based cooperative that provides various services and programs to support its members, including access to financial assistance, livelihood opportunities, and other essential services. It aims to empower its members through shared resources, fostering economic growth and social development in the community.>
+        
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <style>
+            .service-intro {
+                margin: 2rem 0;
+            }
+
+            .service-cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+                background: #f8f9fa;
+                border-radius: 8px;
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+
+            .service-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .pricing-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                margin: 1.5rem 0;
+            }
+
+            .price-item {
+                padding: 1rem;
+                background: #fff;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .price-item.featured {
+                border: 2px solid #007bff;
+                background: #f8f9fa;
+            }
+
+            .service-name {
+                font-weight: 600;
+                color: #000000;
+            }
+
+            .price {
+                font-size: 1.25rem;
+                color: #007bff;
+            }
+
+            .fees-table {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .fees-group {
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 8px;
+            }
+
+            .fees-group h4 {
+                margin-bottom: 1rem;
+                color: #343a40;
+            }
+
+            .fees-group ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .fees-group ul li {
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .fees-group ul li:last-child {
+                border-bottom: none;
+            }
+
+            .service-badges {
+                display: flex;
+                gap: 1rem;
+                margin: 1rem 0;
+                flex-wrap: wrap;
+            }
+
+            .badge {
+                background: #f8f9fa;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: #000000;
+            }
+
+            .badge i {
+                color: #007bff;
+            }
+
+            .feature-list {
+                list-style: none;
+                padding: 0;
+                margin-top: 1rem;
+                text-align: left;
+                color: #000000;
+            }
+
+            .feature-list li {
+                margin: 0.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: #000000;
+            }
+
+            .feature-list li i {
+                color: #007bff;
+            }
+
+            .package-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .package-icon {
+                font-size: 2rem;
+                color: #007bff;
+            }
+
+            .save-badge {
+                background: #dc3545;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                margin-top: 0.5rem;
+            }
+
+            .package-features {
+                list-style: none;
+                padding: 0;
+                margin: 1rem 0;
+                text-align: left;
+            }
+
+            .package-features li {
+                margin: 0.5rem 0;
+                color: #000000;
+                font-size: 0.9rem;
+            }
+
+            .additional-options {
+                margin: 2rem 0;
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 8px;
+            }
+
+            .option-item {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                background: white;
+                border-radius: 4px;
+                margin-top: 1rem;
+            }
+
+            .option-name {
+                font-weight: 600;
+                color: #000000;
+            }
+
+            .option-price {
+                color: #007bff;
+                font-size: 1.1rem;
+            }
+
+            .option-note {
+                font-size: 0.9rem;
+                color: #000000;
+            }
+
+            .fee-label {
+                flex: 1;
+                color: #000000;
+            }
+
+            .fee-amount {
+                font-weight: 600;
+                color: #007bff;
+            }
+
+            .fee-note {
+                display: block;
+                font-size: 0.8rem;
+                color: #000000;
+                margin-top: 0.25rem;
+            }
+
+            .service-contact {
+                margin-top: 3rem;
+                text-align: center;
+            }
+
+            .contact-options {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+                margin-top: 1.5rem;
+            }
+
+            .contact-card {
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .contact-card i {
+                font-size: 2rem;
+                color: #007bff;
+                margin-bottom: 1rem;
+            }
+
+            @media (max-width: 768px) {
+                .service-badges {
+                    justify-content: center;
+                }
+                
+                .pricing-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .fees-table {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+<body>
+    
+
+    <!-- Pre-Header -->
+    <div class="pre-header">
+        <div class="pre-header-container">
+            <!-- Announcements Ticker -->
+            <div class="announcements-ticker">
+                <div class="ticker-label">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Announcements:</span>
+                </div>
+                <div class="ticker-content">
+                    <div class="ticker-items">
+                        <span>Welcome to SEMCO - Your Friendly Cooperative!</span>
+                        <span>New loan packages available for members</span>
+                        <span>Visit our new branch in Semirara Island</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Info -->
+            <div class="quick-info">
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Open Hours: 8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Hotline: +63 (0998) 979-2801</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header with Mobile Toggle -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="header-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo/semco logo 1.jpg" alt="SEMCO Logo" class="logo-image">
+                    <div class="logo-text">
+                        <span class="logo-title">SEMCO</span>
+                        <span class="logo-subtitle">Semirara Multi-Purpose Cooperative</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#services" class="nav-link active">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-grid">
+                                <a href="#trading" class="dropdown-item">
+                                    <i class="fas fa-store"></i>
+                                    <div>
+                                        <h4>Trading Store</h4>
+                                        <p>Fresh groceries and essentials</p>
+                                    </div>
+                                </a>
+                                <a href="#lending" class="dropdown-item">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                    <div>
+                                        <h4>Lending</h4>
+                                        <p>Financial assistance</p>
+                                    </div>
+                                </a>
+                                <a href="Catv page.html" class="dropdown-item">
+                                    <i class="fas fa-tv"></i>
+                                    <div>
+                                        <h4>CATV & Internet</h4>
+                                        <p>Entertainment & connectivity</p>
+                                    </div>
+                                </a>
+                                <a href="#remittance" class="dropdown-item">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    <div>
+                                        <h4>Remittance</h4>
+                                        <p>Money transfer services</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#news" class="nav-link">
+                            <i class="fas fa-newspaper"></i>
+                            <span>News</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuButton" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <img src="images/logo/semco logo 1.jpg" alt="SEMCO Logo" class="mobile-logo">
+                <button id="closeMenu" class="close-button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-items">
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                
+                <!-- Services Dropdown -->
+                <li class="has-dropdown">
+                    <button class="dropdown-toggle">
+                        <div class="menu-item-content">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Services</span>
+                        </div>
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <ul class="mobile-dropdown">
+                        <li>
+                            <a href="#trading">
+                                <i class="fas fa-store"></i>
+                                <div class="dropdown-item-content">
+                                    <span>Trading Store</span>
+                                    <p>Fresh groceries and essentials</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lending">
+                                <i class="fas fa-hand-holding-usd"></i>
+                                <div class="dropdown-item-content">
+                                    <span>Lending</span>
+                                    <p>Financial assistance</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Catv page.html">
+                                <i class="fas fa-tv"></i>
+                                <div class="dropdown-item-content">
+                                    <span>CATV & Internet</span>
+                                    <p>Entertainment & connectivity</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#remittance">
+                                <i class="fas fa-exchange-alt"></i>
+                                <div class="dropdown-item-content">
+                                    <span>Remittance</span>
+                                    <p>Money transfer services</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li><a href="#about"><i class="fas fa-info-circle"></i>About</a></li>
+                <li><a href="#news"><i class="fas fa-newspaper"></i>News</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<bR>
+    <br>
+   <!-- Main Content -->
+   <main>
+    <article class="article">
+        <div class="sections-container">
+            <img src="images/logo/catv1internet.jpg" alt="SEMCO CATV and Internet Services" class="article-image" style="width: 100%; height: auto;">
+
+            <div class="article-header">
+                <h2 class="article-title">CATV and Internet Services</h2>
+                <p class="article-meta">Last Updated: <time datetime="2024-01-01">January 1, 2024</time></p>
+                <div class="service-badges">
+                    <span class="badge"><i class="fas fa-check-circle"></i> 24/7 Technical Support</span>
+                    <span class="badge"><i class="fas fa-shield-alt"></i> Reliable Connection</span>
+                    <span class="badge"><i class="fas fa-bolt"></i> Fast Installation</span>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <!-- Introduction -->
+                <div class="service-intro">
+                    <h3>Our Premium Services</h3>
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <i class="fas fa-tv fa-2x"></i>
+                            <h4>Cable TV</h4>
+                            <p>Experience entertainment like never before with our premium CATV service:</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> 60+ channels including HD content</li>
+                                <li><i class="fas fa-check"></i> Crystal clear picture quality</li>
+                                <li><i class="fas fa-check"></i> Weather-resistant signal</li>
+                                <li><i class="fas fa-check"></i> Local and international channels</li>
+                                <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-wifi fa-2x"></i>
+                            <h4>Fiber Internet</h4>
+                            <p>Stay connected with our high-speed fiber internet:</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Up to 50Mbps download speed</li>
+                                <li><i class="fas fa-check"></i> Unlimited data usage</li>
+                                <li><i class="fas fa-check"></i> Low latency for gaming</li>
+                                <li><i class="fas fa-check"></i> Fiber-optic technology</li>
+                                <li><i class="fas fa-check"></i> Free modem installation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Tables -->
+                <div class="pricing-section">
+                    <h3><i class="fas fa-tags"></i> Installation Packages</h3>
+                    <div class="pricing-grid">
+                        <div class="price-item">
+                            <div class="package-header">
+                                <i class="fas fa-tv package-icon"></i>
+                                <span class="service-name">CATV Basic</span>
+                            </div>
+                            <span class="price">₱1,000.00</span>
+                            <ul class="package-features">
+                                <li>Standard installation</li>
+                                <li>15ft cable included</li>
+                                <li>1 TV connection</li>
+                                <li>Basic channel package</li>
+                            </ul>
+                        </div>
+                        <div class="price-item">
+                            <div class="package-header">
+                                <i class="fas fa-wifi package-icon"></i>
+                                <span class="service-name">Internet Basic</span>
+                            </div>
+                            <span class="price">₱2,500.00</span>
+                            <ul class="package-features">
+                                <li>Fiber installation</li>
+                                <li>40m cable included</li>
+                                <li>Free modem</li>
+                                <li>Basic speed package</li>
+                            </ul>
+                        </div>
+                        <div class="price-item featured">
+                            <div class="package-header">
+                                <i class="fas fa-star package-icon"></i>
+                                <span class="service-name">Premium Bundle</span>
+                                <span class="save-badge">SAVE ₱500!</span>
+                            </div>
+                            <span class="price">₱3,500.00</span>
+                            <ul class="package-features">
+                                <li>CATV + Internet installation</li>
+                                <li>All cables included</li>
+                                <li>Free modem & setup</li>
+                                <li>Priority installation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3><i class="fas fa-credit-card"></i> Monthly Subscriptions</h3>
+                    <div class="pricing-grid">
+                        <div class="price-item">
+                            <div class="package-header">
+                                <span class="service-name">CATV Basic</span>
+                            </div>
+                            <span class="price">₱400.00</span>
+                            <ul class="package-features">
+                                <li>60+ channels</li>
+                                <li>HD channels included</li>
+                                <li>24/7 support</li>
+                            </ul>
+                        </div>
+                        <div class="price-item">
+                            <div class="package-header">
+                                <span class="service-name">Internet 25Mbps</span>
+                            </div>
+                            <span class="price">₱1,200.00</span>
+                            <ul class="package-features">
+                                <li>25Mbps speed</li>
+                                <li>Unlimited data</li>
+                                <li>Technical support</li>
+                            </ul>
+                        </div>
+                        <div class="price-item featured">
+                            <div class="package-header">
+                                <span class="service-name">Premium Bundle</span>
+                                <span class="save-badge">BEST VALUE!</span>
+                            </div>
+                            <span class="price">₱1,600.00</span>
+                            <ul class="package-features">
+                                <li>CATV + 25Mbps Internet</li>
+                                <li>All features included</li>
+                                <li>Priority support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="additional-options">
+                        <h4 style="color: #000000;">Optional Add-ons</h4>
+                        <div class="option-item">
+                            <span class="option-name">Additional TV Connection</span>
+                            <span class="option-price">₱100.00/month</span>
+                            <span class="option-note">Maximum 2 additional connections</span>
+                        </div>
+                    </div>
+
+                    <h3><i class="fas fa-tools"></i> Service Fees & Charges</h3>
+                    <div class="fees-table">
+                        <div class="fees-group">
+                            <h4><i class="fas fa-map-marker-alt"></i> Transfer Fees</h4>
+                            <ul>
+                                <li>
+                                    <span class="fee-label">CATV Transfer (Brgy Semirara)</span>
+                                    <span class="fee-amount">₱200.00</span>
+                                </li>
+                                <li>
+                                    <span class="fee-label">CATV Transfer (Bunlao Housing)</span>
+                                    <span class="fee-amount">₱500.00</span>
+                                </li>
+                                <li>
+                                    <span class="fee-label">Internet Transfer (Brgy Semirara)</span>
+                                    <span class="fee-amount">₱100.00</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fees-group">
+                            <h4><i class="fas fa-plug"></i> Reconnection Fees</h4>
+                            <ul>
+                                <li>
+                                    <span class="fee-label">CATV Main Line</span>
+                                    <span class="fee-amount">₱300.00</span>
+                                </li>
+                                <li>
+                                    <span class="fee-label">CATV Extension</span>
+                                    <span class="fee-amount">₱50.00</span>
+                                </li>
+                                <li>
+                                    <span class="fee-label">Internet Service</span>
+                                    <span class="fee-amount">₱300.00</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fees-group">
+                            <h4><i class="fas fa-plus-circle"></i> Additional Materials</h4>
+                            <ul>
+                                <li>
+                                    <span class="fee-label">Extra Coaxial Cable</span>
+                                    <span class="fee-amount">₱35.00/meter</span>
+                                    <span class="fee-note">Beyond 15ft included</span>
+                                </li>
+                                <li>
+                                    <span class="fee-label">Extra Fiber Cable</span>
+                                    <span class="fee-amount">₱35.00/meter</span>
+                                    <span class="fee-note">Beyond 40m included</span>
+                                </li>
+                                <li>
+                                    <span class="fee-label">Modem Replacement</span>
+                                    <span class="fee-amount">₱2,500.00</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="service-contact">
+                        <h3><i class="fas fa-headset"></i> Need Assistance?</h3>
+                        <div class="contact-options">
+                            <div class="contact-card">
+                                <i class="fas fa-phone-alt"></i>
+                                <h4>Technical Support</h4>
+                                <p>24/7 Hotline: +63 (0998) 979-2801</p>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-store"></i>
+                                <h4>Visit Our Office</h4>
+                                <p>Open Hours: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <!-- Company Info -->
+            <div class="footer-company">
+                <div class="footer-brand">
+                    <span class="footer-logo">SEMCO</span>
+                    <p class="company-desc">Creating exceptional digital experiences that transform businesses and engage users.</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-group">
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#new">whats New</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#web">Trading (Our Store)</a></li>
+                        <li><a href="#mobile">Accounting Office</a></li>
+                        <li><a href="#ui-ux">Catv and Internet</a></li>
+                        <li><a href="#branding">Remittance</a></li>
+                        <li><a href="#consulting">Cash Agad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>5711 Sitio sibucao Semirara, Caluya, Antique</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+93 (956) 564-8752</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>Semco_semnirara@yahoo.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <p>&copy; 2024 SEMCO. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="Privacy Policy.html">Privacy Policy</a>
+                    <a href="Terms and Condition.html">Terms of Service</a>
+                    <a href="Cookie Policy.html">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <form class="newsletter-form">
+                    <label for="newsletter-email">Subscribe to our newsletter</label>
+                    <div class="input-group">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Modal Structure -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>E-Commerce Platform</h2>
+            <p>Detailed information about the E-Commerce Platform project goes here.</p>
+            <img src="images/projects/project1.jpg" alt="Project 1" style="width: 100%;">
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Finance Dashboard</h2>
+            <p>Detailed information about the Finance Dashboard project goes here.</p>
+            <img src="images/projects/project2.jpg" alt="Project 2" style="width: 100%;">
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Health Platform</h2>
+            <p>Detailed information about the Health Platform project goes here.</p>
+            <img src="images/projects/project3.jpg" alt="Project 3" style="width: 100%;">
+        </div>
+    </div>
+</body>
+</html>
