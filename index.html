@@ -207,7 +207,9 @@
                     <a href="Service.html" class="mobile-nav-link">
                         <i class="fas fa-hands-helping"></i>
                         <span>Services</span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
+                        <button class="toggle-submenu">
+                            <i class="fas fa-chevron-right toggle-icon"></i>
+                        </button>
                     </a>
                     <ul class="mobile-submenu">
                         <li><a href="#trading">
@@ -246,7 +248,9 @@
                     <a href="About.html" class="mobile-nav-link">
                         <i class="fas fa-info-circle"></i>
                         <span>About</span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
+                        <button class="toggle-submenu">
+                            <i class="fas fa-chevron-right toggle-icon"></i>
+                        </button>
                     </a>
                     <ul class="mobile-submenu">
                         <li><a href="business-profile.html">
@@ -274,7 +278,7 @@
                 </li>
                 
                 <li class="mobile-nav-item">
-                    <a href="#news" class="mobile-nav-link">
+                    <a href="news.html" class="mobile-nav-link">
                         <i class="fas fa-newspaper"></i>
                         <span>News</span>
                     </a>
@@ -1422,21 +1426,16 @@
                 document.body.style.overflow = '';
             });
 
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (mobileMenu.classList.contains('active') && 
-                    !e.target.closest('.mobile-menu') && 
-                    !e.target.closest('.menu-button')) {
-                    mobileMenu.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-
-            // Prevent default behavior for dropdown parent links
-            const dropdownLinks = document.querySelectorAll('.has-submenu > .mobile-nav-link');
-            dropdownLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+            // Handle submenu toggles
+            const toggleButtons = document.querySelectorAll('.toggle-submenu');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
                     e.preventDefault();
+                    const submenu = this.closest('.has-submenu').querySelector('.mobile-submenu');
+                    submenu.classList.toggle('active');
+                    const icon = this.querySelector('.toggle-icon');
+                    icon.classList.toggle('fa-chevron-right');
+                    icon.classList.toggle('fa-chevron-down');
                 });
             });
         });
@@ -1606,6 +1605,52 @@
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+        }
+    </style>
+
+    <!-- Add or update these styles -->
+    <style>
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #000000;
+            width: 100%;
+        }
+
+        .mobile-submenu a {
+            color: #000000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            gap: 10px;
+        }
+
+        .submenu-content {
+            color: #000000;
+        }
+
+        .submenu-content p {
+            color: #666666;
+            font-size: 0.9em;
+            margin-top: 2px;
+        }
+
+        .toggle-submenu {
+            background: none;
+            border: none;
+            padding: 8px;
+            color: #000000;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .mobile-nav-link i,
+        .mobile-submenu i {
+            color: #000000;
         }
     </style>
 </body>
