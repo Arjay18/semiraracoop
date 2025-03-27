@@ -25,6 +25,80 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        .statistics {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            margin-bottom: 20px;
+        }
+
+        .stat-icon i {
+            font-size: 2.5rem;
+            color: #1a237e;
+            background: #e3f2fd;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .stat-title {
+            font-size: 1.25rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .stat-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .statistics {
+                padding: 60px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Pre-Header -->
@@ -103,7 +177,7 @@
                                     </div>
                                 </a>
                                 <a href="#lending" class="dropdown-item">
-                                    <i class="fas fa-hand-holding-usd"></i>
+                                    <i class="fas fa-hand-holding-usd" style="color: #1a237e;"></i>
                                     <div>
                                         <h4>Lending</h4>
                                         <p>Financial assistance</p>
@@ -220,7 +294,7 @@
                             </div>
                         </a></li>
                         <li><a href="#lending">
-                            <i class="fas fa-hand-holding-usd"></i>
+                            <i class="fas fa-hand-holding-usd" style="color: #1a237e;"></i>
                             <div class="submenu-content">
                                 <span>Lending</span>
                                 <p>Financial assistance</p>
@@ -245,7 +319,7 @@
                 
                 <!-- About Dropdown -->
                 <li class="mobile-nav-item has-submenu">
-                    <a href="About.html" class="mobile-nav-link">
+                    <a href="about.html" class="mobile-nav-link">
                         <i class="fas fa-info-circle"></i>
                         <span>About</span>
                         <button class="toggle-submenu">
@@ -313,6 +387,78 @@
                     <span>Get Started</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+     <!-- Services Section -->
+     <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Services</span>
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">Discover our comprehensive range of services designed to meet your needs</p>
+                </div>
+
+            <div class="services-grid">
+                <!-- Trading Card -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="service-title">Trading Store</h3>
+                    <p class="service-description">
+                        Access quality groceries and essential items at competitive prices. Our trading store offers a wide selection of products to meet your daily needs.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Fresh groceries</li>
+                        <li><i class="fas fa-check"></i> Household essentials</li>
+                        <li><i class="fas fa-check"></i> Competitive prices</li>
+                        </ul>
+                    <a href="#trading" class="service-button">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    </div>
+
+                <!-- CATV & Internet Card -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="service-title">CATV & Internet</h3>
+                    <p class="service-description">
+                        Stay connected and entertained with our reliable CATV and high-speed internet services, providing quality content and connectivity.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> High-speed internet</li>
+                        <li><i class="fas fa-check"></i> Quality TV channels</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                    </ul>
+                    <a href="Catv page.html" class="service-button">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Lending Card -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-usd" style="color: #1a237e;"></i>
+                    </div>
+                    <h3 class="service-title">Lending Services</h3>
+                    <p class="service-description">
+                        Access flexible financial solutions with our various loan packages designed to support your needs and goals.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Multiple loan types</li>
+                        <li><i class="fas fa-check"></i> Competitive rates</li>
+                        <li><i class="fas fa-check"></i> Quick processing</li>
+                    </ul>
+                    <a href="#lending" class="service-button">
+                        Learn More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -388,328 +534,45 @@
             </div>
         </div>
     </section>
-
-    <!-- Card Slider Section -->
-    <section class="card-slider-section">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title" data-aos="fade-up">
-                    Semco Loan Offered
-                    <span class="title-line"></span>
-                </h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Explore our latest Loan Offered of Semco
-                </p>
-            </div>
-
-            <div class="card-slider-container" data-aos="fade-up">
-                <div class="swiper card-slider">
-                    <div class="swiper-wrapper">
-                        <!-- Card 1 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/1.jpg" alt="Project 1">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Long Term Loan</h3>
-                                    <button class="card-btn" data-modal="modal1">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/2.jpg" alt="Project 2">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Short Term Loan</h3>
-                                   
-                                    <button class="card-btn" data-modal="modal2">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/3.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Appliances Loan</h3>
-                                    
-                                    <button class="card-btn" data-modal="modal3">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/4.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Educational Loan</h3>
-                                    
-                                    <button class="card-btn" data-modal="modal4">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/5.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Vesting Rights Loan</h3>
-                                    
-                                    <button class="card-btn" data-modal="modal5">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 6 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/6.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Length of Service loan</h3>
-                                    
-                                    <button class="card-btn" data-modal="modal6">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                          <!-- Card 7 -->
-                          <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/7.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Business Loan</h3>
-                                   
-                                    <button class="card-btn" data-modal="modal7">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 8 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/8.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Special Occasion Loan</h3>
-                                   
-                                    <button class="card-btn" data-modal="modal8">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 9 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/9.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Emergency Loan</h3>
-                                    
-                                    <button class="card-btn" data-modal="modal9">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 10 -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="images/Loan icon/10.jpg" alt="Project 3">
-                                    <div class="card-category">Loan Offer</div>
-                                </div>
-                                <div class="card-content">
-                                    <h3>Medical Loan</h3>
-                                    
-                                    <button class="card-btn" data-modal="modal10">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Add more cards as needed -->
-
-                    </div>
-                    
-                    <!-- Navigation -->
-                    <div class="slider-nav">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    
-                    <!-- Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
+    
     
 
 
-   
-    <!-- News Section -->
-<section id="news" class="news">
-    <div class="section-container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-badge">Latest Updates</span>
-            <h2 class="section-title">News & Events</h2>
-            <p class="section-subtitle">Stay connected with SEMCO's latest activities and announcements</p>
-        </div>
-
-        <div class="news-grid">
-            <!-- News Article 1 -->
-            <article class="news-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="news-image-wrapper">
-                    <img src="images/Service Images/semirara multi purpose cooperative (800 x 500 px) (700 x 500 px).jpg" alt="Kids Day Out Event" class="news-image">
-                    <div class="news-category">Community</div>
-                </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-date">
-                            <i class="far fa-calendar-alt"></i>
-                            Jan 1, 2024
-                        </span>
-                        <span class="news-read-time">
-                            <i class="far fa-clock"></i>
-                            5 min read
-                        </span>
-                    </div>
-                    <h3 class="news-title">KID'S DAY OUT: OUTREACH PROGRAM 2024</h3>
-                    <p class="news-description">Join us for a day filled with fun activities and giving back to our community. Activities include games, storytelling, and gift-giving.</p>
-                    <a href="News Article1.html" class="service-button">
-                        Read Full Story
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
-
-            <!-- News Article 2 -->
-            <article class="news-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="news-image-wrapper">
-                    <img src="images/Service Images/semco.jpg" alt="SMPC Pride Month" class="news-image">
-                    <div class="news-category">Community</div>
-                </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-date">
-                            <i class="far fa-calendar-alt"></i>
-                            Jan 15, 2024
-                        </span>
-                        <span class="news-read-time">
-                            <i class="far fa-clock"></i>
-                            5 min read
-                        </span>
-                    </div>
-                    <h3 class="news-title">SMPC PRIDE MONTH Participation</h3>
-                    <p class="news-description">The SEMCO officers and staff celebrated Pride Month on June 23, 2024, organized by SMPC,</p>
-                    <a href="News Article2.html" class="service-button">
-                        Read Full Story
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
-
-            <!-- News Article 3 -->
-            <article class="news-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="news-image-wrapper">
-                    <img src="images/Service Images/tree planting (2).jpg" alt="Tree Planting Event" class="news-image">
-                    <div class="news-category">Community</div>
-                </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-date">
-                            <i class="far fa-calendar-alt"></i>
-                            Feb 1, 2024
-                        </span>
-                        <span class="news-read-time">
-                            <i class="far fa-clock"></i>
-                            5 min read
-                        </span>
-                    </div>
-                    <h3 class="news-title">TREE PLANTING ACTIVITY</h3>
-                    <p class="news-description">On November 10, 2024, the Semirara Multi-purpose Cooperative (SEMCO) organized a significant tree-planting event,</p>
-                    <a href="News Article3.html" class="service-button">
-                        Read Full Story
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </article>
-        </div>
-
-        <div class="news-footer" data-aos="fade-up">
-            <a href="news.html" class="service-button">
-                View All News
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-    
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics">
         <div class="section-container">
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-up">
-                    <h2 class="section-title">
-                        Get in Touch
-                        <span class="title-line"></span>
-                    </h2>
-                    <p class="contact-subtitle">
-                        We would love to hear from you! Whether you have any inquiries, feedback, or just want to say hello, feel free to contact us using the information below.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>semco_semirara@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+63 (0998) 979-2801</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>5711 Sitio Sibucao Semirara, Caluya, Antique</span>
-                        </div>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Numbers</span>
+                <h2 class="section-title">SEMCO Statistics</h2>
+                <p class="section-subtitle">Growing stronger together as a community</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
                     </div>
+                    <div class="stat-number" data-count="1500">0</div>
+                    <h3 class="stat-title">Regular Members</h3>
+                    <p class="stat-description">Active participating members</p>
                 </div>
-                <div class="map-container" style="margin-top: 20px;">
-                    <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3708.650524070841!2d121.38720967482553!3d12.063897588174243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bac4f83792aa85%3A0x3db2c2d6fca4d0aa!2sSemirara%20Multi%20purpose%20Cooperative!5e1!3m2!1sen!2sph!4v1741479340045!5m2!1sen!2sph"
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        style="width: 100%; height: 300px; border: 0;">
-                    </iframe>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="stat-number" data-count="500">0</div>
+                    <h3 class="stat-title">Associate Members</h3>
+                    <p class="stat-description">Supporting community members</p>
+                </div>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="stat-number" data-count="50">0</div>
+                    <h3 class="stat-title">Employees</h3>
+                    <p class="stat-description">Dedicated staff members</p>
                 </div>
             </div>
         </div>
@@ -828,342 +691,9 @@
     <script src="js/animations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Modal Structure -->
-    <div class="modal" id="modal1">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Long Term Loan</h2>
-            <ul>
-                <div class="ticks-list"><span><i class="fa fa-check"></i> 2 latest payslip-Open fo restructure</span><br>
-                  <span><i class="fa fa-check"></i> For 200k loan amount, number of co-makers must be atleast 15 personnel.</span><br>
-                </div>
-              </ul>
-              <h3 style="color: olivedrab;">Member's Qualification :</h3>
-              <ol>
-                <div class="ticks-list">
-                <span><i class="fa fa-check"></i>  Regular Member "Payroll deduction"-10 years & Above</span><br>
-                <span><i class="fa fa-check"></i> Regular Member "Payroll deduction"-below 10 years</span><br>
-                <span><i class="fa fa-check"></i> Associate Member "Payroll deduction"-below 5 years</span><br>
-                <span><i class="fa fa-check"></i> Regular & Associate Members "nonpayroll deduction</span>
-                </div>
-              </ol>
-              <h3 style="color: olivedrab;">Payment Terms:</h3>
-              <ol>
-                <div class="ticks-list">
-                <span><i class="fa fa-check"></i>  1yr / 2yr / 3yrs</span><br>
-                </div>
-              </ol>
-              <h3 style="color: olivedrab;">Interest :</h3>
-              <ol>
-                <div class="ticks-list">
-                <span><i class="fa fa-check"></i>  17% / 24% / 33%</span><br>
-                </div>
-              </ol>
-           
-        </div>
-    </div>
+   
 
-    <div class="modal" id="modal2">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Short Term Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-              <ul>
-                <div class="ticks-list"><span><i class="fa fa-check"></i> 2 Latest payslip-Open for restructure</span>
-                  </div>
-              </ul>
-              <h3 style="color: olivedrab;">Member's Qualification :</h3>
-              <ol>
-                <div class="ticks-list">
-                <span><i class="fa fa-check"></i> All Semco Members</span>
-                </div>
-              </ol>
-              <h3 style="color: olivedrab;">Payment Terms:</h3>
-              <ol>
-                <div class="ticks-list">
-                <span><i class="fa fa-check"></i> 3mos / 6mos</span>
-                </div>
-              </ol>
-              <h3 style="color: olivedrab;">Interest :</h3>
-              <ol>
-                <div class="ticks-list">
-                <span><i class="fa fa-check"></i>25% / 10%</span>
-                </div>
-              </ol>
-           
-        </div>
-    </div>
-
-    <div class="modal" id="modal3">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Appliances Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-          <ul>
-            <div class="ticks-list"><span><i class="fa fa-check"></i> 2 latest payslip-Not allowed for restructure</span><br>
-            </div>
-          </ul>
-          <h3 style="color:olivedrab;">Member's Qualification :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i> All Regular and Associate Member (under payroll deduction)</span><br>
-            <span><i class="fa fa-check"></i> For non-Payroll deduction</span><br>
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Payment Terms:</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  3mos / 6mos / 1yrs</span><br>
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Interest :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  10% / 15% / 22%</span><br>
-            </div>
-          </ol>
-           
-        </div>
-    </div>
-
-    <div class="modal" id="modal4">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Appliances Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-            <ul>
-              <div class="ticks-list">
-                <span><i class="fa fa-check"></i> Photocopy of Birth Certificate of Beneficiary</span>
-                <span><i class="fa fa-check"></i> Any Proof of School records(e.g,SChool ID, Enrollment Record, Etc)</span>
-                <span><i class="fa fa-check"></i> Official Receipt - Open for restructure</span>
-              </div>
-            </ul>
-            <h3 style="color: olivedrab;">Member's Qualification :</h3>
-            <ol>
-              <div class="ticks-list">
-                <span><i class="fa fa-check"></i> All members with children, brother & Sister studying in any school Level.</span>
-              </div>
-            </ol>
-            <h3 style="color: olivedrab;">Payment Terms:</h3>
-            <ol>
-              <div class="ticks-list">
-                <span><i class="fa fa-check"></i> 6mos / 1yr / 2yrs</span>
-              </div>
-            </ol>
-            <h3 style="color: olivedrab;">Interest :</h3>
-            <ol>
-              <div class="ticks-list">
-                <span><i class="fa fa-check"></i> 8% / 15% / 22%</span>
-              </div>
-            </ol>
-           
-        </div>
-    </div>
-
-    <div class="modal" id="modal5">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Vesting Rights Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-          <ul>
-            <div class="ticks-list"><span>
-              <span><i class="fa fa-check"></i> 2 Latest Payslip-Open For Restructure</span>
-            </div>
-          </ul>
-          <h3 style="color: olivedrab;">Member's Qualification :</h3>
-          <ol>
-            <div class="ticks-list">
-              <span><i class="fa fa-check"></i> SMPC Employees-10 years and above</span>
-            </div>
-          </ol>
-          <h3 style="color:olivedrab;">Payment Terms:</h3>
-          <ol>
-            <div class="ticks-list">
-              <span><i class="fa fa-check"></i> 1yr / 2yr / 3yrs</span>
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Interest :</h3>
-          <ol>
-            <div class="ticks-list">
-              <span><i class="fa fa-check"></i> 17% / 23% / 33%</span>
-            </div>
-          </ol>
-            
-        </div>
-    </div>
-
-    <div class="modal" id="modal6">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Lenght of Service Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-          <ul>
-            <div class="ticks-list"><span><i class="fa fa-check"></i> 2 latest payslip-Open fo restructure</span><br>
-            </div>
-          </ul>
-          <h3 style="color: olivedrab;">Member's Qualification :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i> DMC-CERE/Semco Employee</span><br>
-            
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Payment Terms:</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  1yr / 2yr / 3yrs</span><br>
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Interest :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  17% / 24% / 33%</span><br>
-            </div>
-          </ol>
-           
-        </div>
-    </div>
-
-    <div class="modal" id="modal7">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Business Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-          <ul>
-            <div class="ticks-list"><span><i class="fa fa-check"></i>Business Permit/License-open for restructure</span><br>
-              <span><i class="fa fa-check"></i> Appriased Business Value:>10,000.00</span><br>
-            </div>
-          </ul>
-          <h3 style="color: olivedrab;">Member's Qualification :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i> All members with business within Semirara island</span><br>
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Payment Terms:</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  6mos / 1yr </span><br>
-            </div>
-          </ol>
-          <h3 style="color:olivedrab;">Interest :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  10% / 17% </span><br>
-            </div>
-          </ol>
-           
-        </div>
-    </div>
-
-    <div class="modal" id="modal8">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Special Occasion Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-          <ul>
-            <div class="ticks-list"><span><i class="fa fa-check"></i> 2 Latest Payslip-Open For Restructure</span><br>
-              <span><i class="fa fa-check"></i> Birthday-copy of Birth Certificate</span><br>
-              <span><i class="fa fa-check"></i> Wedding-copy of Invitation Letter or any Proof of Wedding Schedule</span><br>
-              <span><i class="fa fa-check"></i> Anniversary-Photocopy of Merriage Cert.</span><br>
-              <span><i class="fa fa-check"></i> Graduation/Js Prom-School ID/Card or any Valid Proof</span><br>
-              <span><i class="fa fa-check"></i> Christmass or New Year</span><br>
-              <span><i class="fa fa-check"></i> Christening-any Proof of Christening</span><br>
-              <span><i class="fa fa-check"></i> Valentines Day-To be availed two(2) weeks before feb.14th</span><br>
-              <span><i class="fa fa-check"></i> Pamanhikan-any Proof of Pamanhikan</span><br>
-              <span><i class="fa fa-check"></i> Thanksgiving/Blessing-Any Proof of Thanksgiving/Blessing Event</span><br>
-              <span><i class="fa fa-check"></i> Fiesta Within Semirara Island</span><br>
-              </div>
-          </ul>
-          <h3 style="color: olivedrab;">Member's Qualification :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i> All semco member</span><br>
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Payment Terms:</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  6mos / 1yr / 2yrs</span><br>
-            </div>
-          </ol>
-          <h3 style="color: olivedrab;">Interest :</h3>
-          <ol>
-            <div class="ticks-list">
-            <span><i class="fa fa-check"></i>  10% / 17% / 24%</span><br>
-            </div>
-          </ol>
-           
-        </div>
-    </div>
-
-    <div class="modal" id="modal9">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Emergency Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-            <ul>
-              <div class="ticks-list"><span><i class="fa fa-check"></i> 2 latest payslip-Not allowed for restructure</span><br>
-                <span><i class="fa fa-check"></i> Calamity-Proof of calamity (i.e Certificate from the Barangay)</span><br>
-                <span><i class="fa fa-check"></i> Medical-Official Reciept (Medical Expences)</span><br>
-                <span><i class="fa fa-check"></i> Bereavement-Death Certificate of Legitimate dependent</span><br>
-              </div>
-            </ul>
-            <h3 style="color: olivedrab;">Member's Qualification :</h3>
-            <ol>
-              <div class="ticks-list">
-              <span><i class="fa fa-check"></i> All Semco Member</span><br>
-              </div>
-            </ol>
-            <h3 style="color: olivedrab;">Payment Terms:</h3>
-            <ol>
-              <div class="ticks-list">
-              <span><i class="fa fa-check"></i>  6mos / 1yr </span><br>
-              </div>
-            </ol>
-            <h3 style="color: olivedrab;">Interest :</h3>
-            <ol>
-              <div class="ticks-list">
-              <span><i class="fa fa-check"></i>  5% / 10% </span><br>
-              </div>
-            </ol>
-            
-        </div>
-    </div>
-
-    <div class="modal" id="modal10">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Medical Loan</h2>
-            <h3 style="color: olivedrab;">Requirements :</h3>
-            <ul>
-              <div class="ticks-list"><span><i class="fa fa-check"></i> 2 latest payslip-Not allowed for restructure</span><br>
-                <span><i class="fa fa-check"></i> Calamity-Proof of calamity (i.e Certificate from the Barangay)</span><br>
-                <span><i class="fa fa-check"></i> Medical-Official Reciept (Medical Expences)</span><br>
-                <span><i class="fa fa-check"></i> Bereavement-Death Certificate of Legitimate dependent</span><br>
-              </div>
-            </ul>
-            <h3 style="color: olivedrab;">Member's Qualification :</h3>
-            <ol>
-              <div class="ticks-list">
-              <span><i class="fa fa-check"></i> All Semco Member</span><br>
-              </div>
-            </ol>
-            <h3 style="color: olivedrab;">Payment Terms:</h3>
-            <ol>
-              <div class="ticks-list">
-              <span><i class="fa fa-check"></i>  6mos / 1yr </span><br>
-              </div>
-            </ol>
-            <h3 style="color: olivedrab;">Interest :</h3>
-            <ol>
-              <div class="ticks-list">
-              <span><i class="fa fa-check"></i>  5% / 10% </span><br>
-              </div>
-            </ol>
-            
-        </div>
-    </div>
+    
 
     <!-- Basic Swiper Styles -->
     <style>
@@ -1653,6 +1183,121 @@
             color: #000000;
         }
     </style>
+
+    <!-- Add this JavaScript for the statistics counter -->
+    <script>
+        function animateNumber(element, target) {
+            let current = 0;
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // 60fps
+
+            function update() {
+                current += step;
+                if (current > target) current = target;
+                element.textContent = Math.floor(current);
+                if (current < target) requestAnimationFrame(update);
+            }
+
+            update();
+        }
+
+        // Initialize counter animation when elements are in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target.getAttribute('data-count');
+                    animateNumber(entry.target, parseInt(target));
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            observer.observe(stat);
+        });
+    </script>
+
+    <!-- Add this CSS rule -->
+    <style>
+        .fas {
+            color: #1a237e;
+        }
+    </style>
+
+    <style>
+        .statistics {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            margin-bottom: 20px;
+        }
+
+        .stat-icon i {
+            font-size: 2.5rem;
+            color: #1a237e;
+            background: #e3f2fd;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .stat-title {
+            font-size: 1.25rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .stat-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .statistics {
+                padding: 60px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
 </body>
 </html>
 
