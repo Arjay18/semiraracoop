@@ -2699,48 +2699,166 @@ body.menu-open {
         padding-left: 3rem;
     }
 }
+/* ... existing code ... */
 
+/* Mobile Responsive Styles */
 
-        .mobile-nav-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 15px;
-            text-decoration: none;
-            color: #000000;
-            width: 100%;
-        }
-
-        .mobile-submenu a {
-            color: #000000;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            padding: 10px 15px;
-            gap: 10px;
-        }
-
-        .submenu-content {
-            color: #000000;
-        }
-
-        .submenu-content p {
-            color: #666666;
-            font-size: 0.9em;
-            margin-top: 2px;
-        }
-
-        .toggle-submenu {
-            background: none;
-            border: none;
-            padding: 8px;
-            color: #000000;
-            cursor: pointer;
-            margin-left: auto;
-        }
-
-        .mobile-nav-link i,
-        .mobile-submenu i {
-            color: #000000;
-        }
+/* General Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    /* Hero Section */
+    .hero-title {
+        font-size: 2.5rem;
+    }
     
+    .hero-description {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    /* Mission & Vision Section */
+    .mv-cards {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 20px;
+    }
+    
+    .mv-card {
+        padding: 2rem;
+    }
+    
+    /* Core Values Section */
+    .values-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    /* Team Section */
+    .team-cards {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    /* About Section */
+    .about-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .image-stack {
+        padding-right: 0;
+    }
+    
+    .main-image {
+        height: 300px;
+    }
+    
+    .accent-image {
+        width: 150px;
+        height: 120px;
+        bottom: -20px;
+    }
+    
+    .experience-badge {
+        padding: 15px;
+    }
+    
+    .experience-badge .years {
+        font-size: 2rem;
+    }
+    
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Small Mobile Adjustments */
+@media screen and (max-width: 480px) {
+    /* Section Padding */
+    .about-section,
+    .mission-vision,
+    .core-values,
+    .team-section {
+        padding: 50px 0;
+    }
+    
+    /* Typography */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .lead-text {
+        font-size: 1rem;
+    }
+    
+    /* Stats Cards */
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Timeline */
+    .timeline-container {
+        padding: 1rem 0;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-date {
+        font-size: 0.9rem;
+    }
+}
+
+/* Navigation Adjustments */
+@media screen and (max-width: 768px) {
+    .header-nav {
+        display: none; /* Hide main navigation */
+    }
+    
+    .mobile-menu {
+        width: 100%;
+    }
+    
+    .mobile-nav-list {
+        padding: 20px;
+    }
+    
+    .pre-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .quick-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Fix for iOS Safari Notch */
+@supports (padding-top: env(safe-area-inset-top)) {
+    .about-hero {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+        
