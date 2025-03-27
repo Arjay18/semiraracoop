@@ -76,7 +76,7 @@
             <nav class="header-nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="index.html" class="nav-link active">
                             <i class="fas fa-home"></i>
                             <span>Home</span>
                         </a>
@@ -121,7 +121,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="About.html" class="nav-link active">
+                        <a href="About.html" class="nav-link">
                             <i class="fas fa-info-circle"></i>
                             <span>About</span>
                             <i class="fas fa-chevron-down"></i>
@@ -1347,4 +1347,49 @@
         height: 250px;
     }
 }
+</style>
+<style>
+    .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #000000;
+            width: 100%;
+        }
+
+        .mobile-submenu a {
+            color: #000000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            gap: 10px;
+        }
+
+        .submenu-content {
+            color: #000000;
+        }
+
+        .submenu-content p {
+            color: #666666;
+            font-size: 0.9em;
+            margin-top: 2px;
+        }
+
+        .toggle-submenu {
+            background: none;
+            border: none;
+            padding: 8px;
+            color: #000000;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .mobile-nav-link i,
+        .mobile-submenu i {
+            color: #000000;
+        }
+    
 </style>
